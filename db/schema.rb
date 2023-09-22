@@ -10,9 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema[7.0].define(version: 2023_09_20_131048) do
-=======
 ActiveRecord::Schema[7.0].define(version: 2023_09_21_112104) do
   create_table "messages", charset: "utf8", force: :cascade do |t|
     t.string "content"
@@ -24,7 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_112104) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
->>>>>>> Stashed changes
   create_table "room_users", charset: "utf8", force: :cascade do |t|
     t.bigint "room_id", null: false
     t.bigint "user_id", null: false
@@ -53,11 +49,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_21_112104) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< Updated upstream
-=======
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
->>>>>>> Stashed changes
   add_foreign_key "room_users", "rooms"
   add_foreign_key "room_users", "users"
 end
