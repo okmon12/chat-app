@@ -11,15 +11,11 @@
     <div class="room">
       <div class="room-name">
       <%= link_to room.name, room_messages_path(room) %>
-           resources :rooms, only: [:new, :create] do
-        resources :messages, only: [:index, :create]
       </div>
     </div>
   <% end %>
   <div class="room">
      <div class="room-name">
-        resources :rooms, only: [:new, :create] do
-        resources :messages, only: [:index, :create]
      </div>
   </div>
   <div class="room">
